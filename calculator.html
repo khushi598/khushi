@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            border: 2px solid black;
+            height: 300px;
+            width: 500px;
+            box-shadow:3px 3px 3px 3px red ;
+            margin: auto;
+            background-color: green;
+
+        }
+        #b{
+            height:90px;
+            width: 500px;
+
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        button{
+            border: 3px solid black;
+            height: 90px;
+            width: 90px;
+            font-size: 25px;
+            border-radius: 45px;
+
+        }
+        @media only screen and (max-width:800px){
+            #a{
+            border: 2px solid black;
+            height: 100px;
+            width: 200px;
+            box-shadow:3px 3px 3px 3px red ;
+            margin: auto;
+            background-color: green;
+
+        }
+        #b{
+            height:30px;
+            width: 195px;
+
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        button{
+            border: 3px solid black;
+            height: 32px;
+            width: 32px;
+            font-size: 8px;
+            border-radius: 20px;
+
+        }    
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+       <input type="text" id="b" readonly>
+       <button type="button" onclick="p('+')" >+</button>
+       <button type="button" onclick="m('-')" >-</button>
+       <button type="button" onclick="mul('*')" >*</button>
+       <button type="button" onclick="div('/')" >/</button>
+       <button type="button" onclick="cal('=')" >=</button>
+       <button type="button" onclick="cl('c')" >c</button>
+
+       <button type="button" onclick="one('1')" >1</button>
+       <button type="button" onclick="two('2')" >2</button>
+
+
+        
+    </div>
+    <script>
+        var mon = document.getElementById('b');
+
+        function p(x){
+         mon.value += x;   
+        }
+        function m(x){
+            mon.value +=x ;
+        }
+        function mul(x){
+            mon.value += x;
+
+        }
+        function div(x){
+            mon.value += x;
+        }
+        function one(x){
+            mon.value +=x;
+        }
+        function two(x){
+            mon. value +=x;
+        }
+        function cl(){
+            mon .value = " ";
+        }
+        function cal(){
+            mon.value = eval(mon.value);
+        }
+    </script>
+</body>
+</html>
